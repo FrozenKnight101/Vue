@@ -1,0 +1,482 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Quiz</title>
+
+<link rel="stylesheet" type="text/css" href="q1.css">
+
+<style>
+    
+
+    /* Add a unique identifier for this specific example */
+    #dynamic-example-container {
+        text-align: center;
+    }
+
+    #dynamic-example-container h1 {
+        color: #333;
+    }
+
+    #dynamic-example-container label {
+        margin: 10px 0;
+        font-weight: bold;
+    }
+
+    #dynamic-example-container input {
+        padding: 8px;
+        width: 200px;
+        margin-right: 10px;
+    }
+
+    #dynamic-example-container button {
+        padding: 8px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    #dynamic-example-container button:hover {
+        background-color: #45a049;
+    }
+
+    #dynamic-example-container #output {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #dynamic-example-container p {
+        margin: 5px 0;
+    }
+
+    .output-container {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left; /* Adjust text alignment as needed */
+    }
+
+    .output-container p {
+        margin: 5px 0;
+    }
+    
+    .bottom-section {
+            display: none;
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Media query for smaller screens */
+        @media only screen and (max-width: 600px) {
+            #dynamic-example-container {
+                max-width: 90%;
+            }
+        }
+
+</style>
+
+<script type="text/javascript">
+function abc(){
+
+var a,b,c,d,e,f,g,p,q ;
+a = frm.a.value ;
+b = frm.b.value ;
+c = frm.c.value ;
+d = frm.d.value ;
+e = frm.e.value ;
+f = frm.f.value ;
+g = frm.g.value ;
+
+
+
+var i = document.getElementById("result");
+    i.querySelector("#your1").innerHTML = "You have selected : " + a;
+	i.querySelector("#correct1").innerHTML = "The correct answer is : HyperText Preprocessor" 
+    
+var j = document.getElementById("result");
+    j.querySelector("#your2").innerHTML = "You have selected : " + b;
+    j.querySelector("#correct2").innerHTML = "The correct answer is : Micro"
+    
+var k = document.getElementById("result");
+    k.querySelector("#your3").innerHTML = "You have selected : " + c;
+    k.querySelector("#correct3").innerHTML = "The correct answer is : Google"
+   
+var l = document.getElementById("result");
+    l.querySelector("#your4").innerHTML = "You have selected : " + d;
+    l.querySelector("#correct4").innerHTML = "The correct answer is : Alibaba "
+    
+var m = document.getElementById("result");
+    m.querySelector("#your5").innerHTML = "You have selected : " + e;
+    m.querySelector("#correct5").innerHTML = "The correct answer is : Through Mobiles"
+   
+var n = document.getElementById("result");
+    n.querySelector("#your6").innerHTML = "You have selected : " + f;
+    n.querySelector("#correct6").innerHTML = "The correct answer is : Larry	"
+  
+var o = document.getElementById("result");
+    o.querySelector("#your7").innerHTML = "You have selected : " + g;
+    o.querySelector("#correct7").innerHTML = "The correct answer is : A11 Bionic	"
+   
+
+	
+}
+
+
+function scorescalc(){
+var correct=0;
+var wrong=0 ;
+
+
+if(frm.a.value=="HyperTextPreprocessor"){
+correct = correct + 1 
+}	
+else
+wrong = wrong + 1;
+
+if(frm.b.value=="Micro"){
+correct = correct + 1 
+}
+else
+wrong = wrong + 1;
+
+if(frm.c.value=="Google"){
+correct = correct + 1 
+}
+else
+wrong = wrong + 1;
+
+if(frm.d.value=="Alibaba"){
+correct = correct + 1 
+}
+else
+wrong = wrong + 1;
+
+if(frm.e.value=="ThroughMobiles"){
+correct = correct + 1 
+}
+else
+wrong = wrong + 1;
+
+if(frm.f.value=="Larry"){
+correct = correct + 1
+}
+else
+wrong = wrong + 1;
+
+if(frm.g.value=="A11Bionic"){
+correct = correct + 1 
+}
+else
+wrong = wrong + 1;	
+
+
+var p = document.getElementById("result");
+    p.querySelector("#Sc1").innerHTML = "<br><br><br>"+" • "+wrong  + " wrong attempts" ;
+    p.querySelector("#Sc2").innerHTML = "<br><br><br>"+" •"+correct+ " correct attempts" ;
+
+
+   
+}
+
+function handleStringMethods() {
+            let inputString = document.getElementById("textInput").value;
+            let strLength = inputString.length;
+            let upperCaseStr = inputString.toUpperCase();
+            let lowerCaseStr = inputString.toLowerCase();
+            let substring = inputString.substring(0, 5);
+            let indexOfWorld = inputString.indexOf("World");
+
+            displayResults(`
+                <p>String Length: ${strLength}</p>
+                <p>Upper Case String: ${upperCaseStr}</p>
+                <p>Lower Case String: ${lowerCaseStr}</p>
+                <p>Substring: ${substring}</p>
+                <p>Index of 'World': ${indexOfWorld}</p>
+            `);
+        }
+
+        function handleNumberMethods() {
+            let inputNumber = parseFloat(document.getElementById("numInput").value);
+            let fixedNum = inputNumber.toFixed(2);
+            let stringNum = inputNumber.toString();
+            let roundedNum = Math.round(inputNumber);
+            let isNaNResult = isNaN(inputNumber);
+
+            displayResults(`
+                <p>Fixed Number: ${fixedNum}</p>
+                <p>Number as String: ${stringNum}</p>
+                <p>Rounded Number: ${roundedNum}</p>
+                <p>isNaN Result: ${isNaNResult}</p>
+            `);
+        }
+
+        function handleArrayMethods() {
+            let inputArray = document.getElementById("arrayInput").value.split(',').map(item => parseFloat(item.trim()));
+            let joinedArray = inputArray.join("-");
+            let reversedArray = inputArray.slice().reverse();
+            let slicedArray = inputArray.slice(1, 4);
+            let indexOfThree = inputArray.indexOf(3);
+            let includesTwo = inputArray.includes(2);
+
+            displayResults(`
+                <p>Joined Array: ${joinedArray}</p>
+                <p>Reversed Array: ${reversedArray}</p>
+                <p>Sliced Array: ${slicedArray}</p>
+                <p>Index of 3: ${indexOfThree}</p>
+                <p>Includes 2: ${includesTwo}</p>
+            `);
+        }
+
+        function handleDateMethods() {
+            let currentDate = new Date();
+            let currentYear = currentDate.getFullYear();
+            let currentMonth = currentDate.getMonth() + 1;
+            let currentDay = currentDate.getDate();
+            let currentHours = currentDate.getHours();
+            let currentMinutes = currentDate.getMinutes();
+
+            displayResults(`
+                <p>Current Year: ${currentYear}</p>
+                <p>Current Month: ${currentMonth}</p>
+                <p>Current Day: ${currentDay}</p>
+                <p>Current Time: ${currentHours}:${currentMinutes}</p>
+            `);
+        }
+
+        function handleFunctionMethods() {
+            let inputName = document.getElementById("functionInput").value;
+            let greeting = greet(inputName);
+
+            displayResults(`
+                <p>Function Greeting: ${greeting}</p>
+            `);
+        }
+
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+
+        function displayResults(htmlContent) {
+            document.getElementById("output").innerHTML = htmlContent;
+        }
+
+// Function to check if the user has scrolled to the bottom
+function isScrolledToBottom() {
+            return window.innerHeight + window.scrollY >= document.body.offsetHeight;
+        }
+
+        // Function to show/hide the bottom section based on scroll position
+        function handleScroll() {
+            var bottomSection = document.getElementById('dynamic-example-container');
+
+            if (isScrolledToBottom()) {
+                bottomSection.style.display = 'block';
+            } else {
+                bottomSection.style.display = 'none';
+            }
+        }
+
+        // Attach the handleScroll function to the scroll event
+        window.addEventListener('scroll', handleScroll);
+
+
+</script>
+
+
+</head>
+<body>
+
+
+
+
+<div class ="gad">
+<center><b>
+<a href="../Home.html"><input type="button" class="bn" value="Home" ></a>
+<a href="../Pages/Gadgets.html"><input type="button" class="bn" value="Gadgets"></a>
+<a href="../Pages/News.html"><input type="button" class="bn" value="News"></a>
+<a href="../Pages/Apps.html"><input type="button" class="bn" value="Apps"></b></a>
+</center>
+
+
+
+
+
+<div class="hg">Quiz Time</div>
+
+<div class="card">
+<p class=nhead>1.What is the fullform of PHP ?</p>
+<form name=frm>
+<input  type="radio" name="a" value="Post Hyper processor"><font face="Century Gothic" size=5>Post Hyper processor
+<br>
+<input  type="radio" name="a" value="Pre Processor Text"><font face="Century Gothic" size=5>Pre Processor Text
+<br>
+<input  type="radio" name="a" value="HyperTextPreprocessor"><font face="Century Gothic" size=5>HyperText Preprocessor
+<br>
+<input  type="radio" name="a" value="Hypertext Postprocessor"><font face="Century Gothic" size=5>Hypertext Postprocessor
+
+</div>
+
+<div class="card">
+<p class=nhead>2.What does M stand for in AMD?</p>
+
+<input  type="radio" name="b" value="Measured"><font face="Century Gothic" size=5>Measured
+<br>
+<input  type="radio" name="b" value="Micro"><font face="Century Gothic" size=5>Micro
+<br>
+<input  type="radio" name="b" value="Made"><font face="Century Gothic" size=5>Made
+<br>
+<input  type="radio" name="b" value="Mode"><font face="Century Gothic" size=5>Mode
+
+</div>
+
+<div class="card">
+<p class=nhead>3. OK ?</p>
+
+<input  type="radio" name="c" value="Cortana"><font face="Century Gothic" size=5>Cortana
+<br>
+<input  type="radio" name="c" value="Siri"><font face="Century Gothic" size=5>Siri
+<br>
+<input  type="radio" name="c" value="Google"><font face="Century Gothic" size=5>Google
+<br>
+<input  type="radio" name="c" value="Alexa"><font face="Century Gothic" size=5>Alexa
+ 
+</div>
+
+<div class="card">
+<p class=nhead>4. If I am Jack Ma ,What do I own  ?</p>
+
+<input  type="radio" name="d" value="Uber"><font face="Century Gothic" size=5>Uber
+<br>
+<input  type="radio" name="d" value="Alibaba"><font face="Century Gothic" size=5>Alibaba
+<br>
+<input  type="radio" name="d" value="Flipkart"><font face="Century Gothic" size=5>Flipkart
+<br>
+<input  type="radio" name="d" value="Ola"><font face="Century Gothic" size=5>Ola
+
+</div>
+
+<div class="card">
+<p class=nhead>5. What does TM stand in Paytm?</p>
+
+<input  type="radio" name="e" value="Track Method"><font face="Century Gothic" size=5>Track Method
+<br>
+<input  type="radio" name="e" value="Through Message"><font face="Century Gothic" size=5>Through Message
+<br>
+<input  type="radio" name="e" value="Terms"><font face="Century Gothic" size=5>Terms
+<br>
+<input  type="radio" name="e" value="ThroughMobiles"><font face="Century Gothic" size=5>Through Mobiles
+ 
+</div>
+
+<div class="card">
+<p class=sixth>6. What is the name of twitter bird ? </p>
+
+<input  type="radio" name="f" value="Honey"><font face="Century Gothic" size=5>Honey
+<br>
+<input  type="radio" name="f" value="Larry"><font face="Century Gothic" size=5>Larry	
+<br>
+<input  type="radio" name="f" value="Pyle"><font face="Century Gothic" size=5>Pyle
+<br>
+<input  type="radio" name="f" value="Tera"><font face="Century Gothic" size=5>Tera
+
+</div>
+
+<div class="card">
+<p class=nhead>7. Apple used which ARM based chip ? </p>
+
+<input  type="radio" name="g" value="AMD"><font face="Century Gothic" size=5>AMD
+<br>
+<input  type="radio" name="g" value="A11Bionic"><font face="Century Gothic" size=5>A11 Bionic	
+<br>
+<input  type="radio" name="g" value="Snapdragon"><font face="Century Gothic" size=5>Snapdragon 
+<br>
+<input  type="radio" name="g" value="Qualcomm"><font face="Century Gothic" size=5>Qualcomm
+ 
+</div>
+<br><center>
+<input type="button" class="bn1" value="Check Answers" onClick="abc()">
+<input type="button" class="bn1" value="Scores" onClick="scorescalc()">
+</center>
+<br>
+<hr align="center">
+<div id="result">
+<div id="Sc1" align="center">  </div>
+<div id="Sc2" align="center"></div>
+
+<div id="your1"></div> 
+<div id="correct1"> </div>
+<br>
+<div id="your2"></div>
+<div id="correct2"> </div>
+<br>
+<div id="your3"></div>
+<div id="correct3"> </div>
+<br>
+<div id="your4"></div>
+<div id="correct4"> </div>
+<br>
+<div id="your5"></div>
+<div id="correct5"> </div>
+<br>
+<div id="your6"></div>
+<div id="correct6"> </div>
+<br>
+<div id="your7"></div>
+<div id="correct7"> </div>
+
+
+
+
+</div>
+
+
+
+</form>
+<br><br>
+
+
+<div class="bottom-section" id="dynamic-example-container">
+    <h1>JavaScript Concepts</h1>
+
+     <label for="textInput">Enter a String:</label>
+     <input type="text" style="color: black;" id="textInput" placeholder="Hello, World!">
+     <button onclick="handleStringMethods()">Run String Methods</button>
+     <br>
+     <label for="numInput">Enter a Number:</label>
+     <input type="number" style="color: black;" id="numInput" placeholder="123.456">
+     <button onclick="handleNumberMethods()">Run Number Methods</button>
+     <br>
+     <label for="arrayInput">Enter an Array:</label>
+     <input type="text" style="color: black;" id="arrayInput" placeholder="1,2,3,4,5">
+     <button onclick="handleArrayMethods()">Run Array Methods</button>
+    
+     <br>
+     <label for="functionInput">Enter your name:</label>
+     <input type="text" style="color: black;" id="functionInput" placeholder="John">
+     <button onclick="handleFunctionMethods()">Run Function Methods</button>
+     <br>
+     <br>
+     <button onclick="handleDateMethods()">Run Date Methods</button>
+     <div id="output" class="output-container">
+        <!-- Output content will be displayed here -->
+     </div>
+    
+</div>
+
+
+
+
+</body>
+</html>

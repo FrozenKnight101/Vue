@@ -1,0 +1,40 @@
+/* styles.css */
+h1 {
+    color: blue;
+}
+
+img {
+    width: 300px;
+    border: 1px solid black;
+}
+
+h2 {
+    color: green;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: lightgray;
+}
+
+h2:nth-child(3) {
+    color: red;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 200px;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="submit"] {
+    background-color: orange;
+    color: white;
+}

@@ -1,0 +1,107 @@
+const htmlCodeContainer = document.getElementById('html-code-container');
+const cssCodeContainer = document.getElementById('css-code-container');
+const outputWindow = document.getElementById('output-window');
+const outputWindowContainer = document.getElementById('output-window-container');
+
+const htmlCodeLines = [
+    '<!DOCTYPE html>',
+    '<html lang="en">',
+    '<head>',
+    '    <meta charset="UTF-8">',
+    '    <meta name="viewport" content="width=device-width, initial-scale=1.0">',
+    '    <title>Your Website Title</title>',
+    '</head>',
+    '<body>',
+    '    <h1 id="title">Hello, World!</h1>',
+    '    <p>This is a simple webpage.</p>',
+    '    </body>',
+    '</html>',
+];
+
+const cssCodeLines = [
+    '/* CSS Styles */',
+    'body {',
+    '    background-color: #282c34;',
+    '    color: white;',
+    '    font-family: "Courier New", Courier, monospace;',
+    '    margin: 0;',
+    '    display: flex;',
+    '    align-items: center;',
+    '    justify-content: center;',
+    '    height: 100vh;',
+    '}',
+    '',
+    '#title {',
+    '    color: #61dafb;',
+    '}',
+];
+
+function typeCode(container, line) {
+    const lineElement = document.createElement('div');
+    lineElement.textContent = line;
+    container.appendChild(lineElement);
+
+    // Create and append the cursor element
+    const cursorElement = document.createElement('span');
+    cursorElement.className = 'cursor';
+    lineElement.appendChild(cursorElement);
+
+    container.scrollTop = container.scrollHeight;
+}
+
+function displayHtmlCode() {
+    htmlCodeContainer.innerHTML = '';
+    htmlCodeLines.forEach((line, index) => {
+        setTimeout(() => {
+            typeCode(htmlCodeContainer, line);
+            if (index === htmlCodeLines.length - 1) {
+                // If it's the last line, update the output window
+                updateOutputWindow();
+            }
+        }, index * 800);
+    });
+}
+
+function displayCssCode() {
+    cssCodeContainer.innerHTML = '';
+    cssCodeLines.forEach((line, index) => {
+        setTimeout(() => {
+            typeCode(cssCodeContainer, line);
+            if (index === cssCodeLines.length - 1) {
+                // If it's the last line, update the output window
+                updateOutputWindow();
+            }
+        }, index * 800);
+    });
+}
+
+function updateOutputWindow() {
+    outputWindow.innerHTML = ''; // Clear previous content
+    const outputContent = document.createElement('div');
+    // Append the actual content to the output window
+    outputContent.innerHTML = '<h1>Hello, World!</h1><p>This is a simple webpage.</p>';
+    outputWindow.appendChild(outputContent);
+}
+
+// Initial style setup
+htmlCodeContainer.style.backgroundColor = '#1e1e1e';
+htmlCodeContainer.style.color = 'white';
+
+cssCodeContainer.style.backgroundColor = '#1e1e1e';
+cssCodeContainer.style.color = 'white';
+
+outputWindowContainer.style.backgroundColor = '#282c34';
+outputWindowContainer.style.color = 'white';
+
+// Trigger the animation after a short delay
+setTimeout(() => {
+    htmlCodeContainer.style.backgroundColor = '#282c34';
+    htmlCodeContainer.style.color = 'white';
+    displayHtmlCode();
+
+    setTimeout(() => {
+        cssCodeContainer.style.backgroundColor = '#282c34';
+        cssCodeContainer.style.color = 'white';
+        displayCssCode();
+    }, 1000);
+}, 1000);

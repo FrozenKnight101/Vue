@@ -1,0 +1,193 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic JavaScript Concepts Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Add a unique identifier for this specific example */
+        #dynamic-example-container {
+            text-align: center;
+        }
+
+        #dynamic-example-container h1 {
+            color: #333;
+        }
+
+        #dynamic-example-container label {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        #dynamic-example-container input {
+            padding: 8px;
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        #dynamic-example-container button {
+            padding: 8px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #dynamic-example-container button:hover {
+            background-color: #45a049;
+        }
+
+        #dynamic-example-container #output {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #dynamic-example-container table {
+            width: 100%;
+        }
+
+        #dynamic-example-container th, #dynamic-example-container td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="dynamic-example-container">
+
+        <h1>Dynamic JavaScript Concepts Example</h1>
+
+        <label for="textInput">Enter a String:</label>
+        <input type="text" id="textInput" placeholder="Hello, World!">
+        <button onclick="handleStringMethods()">Run String Methods</button>
+
+        <label for="numInput">Enter a Number:</label>
+        <input type="number" id="numInput" placeholder="123.456">
+        <button onclick="handleNumberMethods()">Run Number Methods</button>
+
+        <label for="arrayInput">Enter an Array (comma-separated):</label>
+        <input type="text" id="arrayInput" placeholder="1,2,3,4,5">
+        <button onclick="handleArrayMethods()">Run Array Methods</button>
+
+        <button onclick="handleDateMethods()">Run Date Methods</button>
+
+        <label for="functionInput">Enter your name:</label>
+        <input type="text" id="functionInput" placeholder="John">
+        <button onclick="handleFunctionMethods()">Run Function Methods</button>
+
+        <div id="output"></div>
+
+    </div>
+
+    <script>
+        function handleStringMethods() {
+            let inputString = document.getElementById("textInput").value;
+            let strLength = inputString.length;
+            let upperCaseStr = inputString.toUpperCase();
+            let lowerCaseStr = inputString.toLowerCase();
+            let substring = inputString.substring(0, 5);
+            let indexOfWorld = inputString.indexOf("World");
+
+            displayResults(`
+                <p>String Length: ${strLength}</p>
+                <p>Upper Case String: ${upperCaseStr}</p>
+                <p>Lower Case String: ${lowerCaseStr}</p>
+                <p>Substring: ${substring}</p>
+                <p>Index of 'World': ${indexOfWorld}</p>
+            `);
+        }
+
+        function handleNumberMethods() {
+            let inputNumber = parseFloat(document.getElementById("numInput").value);
+            let fixedNum = inputNumber.toFixed(2);
+            let stringNum = inputNumber.toString();
+            let roundedNum = Math.round(inputNumber);
+            let isNaNResult = isNaN(inputNumber);
+
+            displayResults(`
+                <p>Fixed Number: ${fixedNum}</p>
+                <p>Number as String: ${stringNum}</p>
+                <p>Rounded Number: ${roundedNum}</p>
+                <p>isNaN Result: ${isNaNResult}</p>
+            `);
+        }
+
+        function handleArrayMethods() {
+            let inputArray = document.getElementById("arrayInput").value.split(',').map(item => parseFloat(item.trim()));
+            let joinedArray = inputArray.join("-");
+            let reversedArray = inputArray.slice().reverse();
+            let slicedArray = inputArray.slice(1, 4);
+            let indexOfThree = inputArray.indexOf(3);
+            let includesTwo = inputArray.includes(2);
+
+            displayResults(`
+                <p>Joined Array: ${joinedArray}</p>
+                <p>Reversed Array: ${reversedArray}</p>
+                <p>Sliced Array: ${slicedArray}</p>
+                <p>Index of 3: ${indexOfThree}</p>
+                <p>Includes 2: ${includesTwo}</p>
+            `);
+        }
+
+        function handleDateMethods() {
+            let currentDate = new Date();
+            let currentYear = currentDate.getFullYear();
+            let currentMonth = currentDate.getMonth() + 1;
+            let currentDay = currentDate.getDate();
+            let currentHours = currentDate.getHours();
+            let currentMinutes = currentDate.getMinutes();
+
+            displayResults(`
+                <p>Current Year: ${currentYear}</p>
+                <p>Current Month: ${currentMonth}</p>
+                <p>Current Day: ${currentDay}</p>
+                <p>Current Time: ${currentHours}:${currentMinutes}</p>
+            `);
+        }
+
+        function handleFunctionMethods() {
+            let inputName = document.getElementById("functionInput").value;
+            let greeting = greet(inputName);
+
+            displayResults(`
+                <p>Function Greeting: ${greeting}</p>
+            `);
+        }
+
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+
+        function displayResults(htmlContent) {
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = "";
+
+            const table = document.createElement("table");
+            table.innerHTML = htmlContent;
+            outputDiv.appendChild(table);
+        }
+
+
+        
+    </script>
+
+</body>
+</html>

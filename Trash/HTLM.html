@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic HTML Page</title>
+    <style>
+        /* Internal Styles */
+        h1 {
+            color: blue;
+        }
+
+        img {
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        h2 {
+            color: green;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+
+        h2:nth-child(3) {
+            color: red;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 200px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        input[type="submit"] {
+            background-color: orange;
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1 style="color: purple;">Welcome to My Web Page</h1>
+
+    <p>This is a simple webpage with various HTML tags.</p>
+
+    <img src="https://example.com/image.jpg" alt="A sample image" style="width: 400px; border: 2px solid black;">
+
+    <h2 style="color: pink;">Simple Table</h2>
+    <table border="1" style="border-collapse: separate; border-spacing: 5px;">
+        <tr>
+            <th style="background-color: lightblue;">Header 1</th>
+            <th style="background-color: lightblue;">Header 2</th>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+        <tr>
+            <td>Data 3</td>
+            <td>Data 4</td>
+        </tr>
+    </table>
+
+    <h2 style="color: brown;">Simple Form</h2>
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required style="width: 250px;"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required style="width: 250px;"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required style="width: 250px;"><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" style="resize: vertical;"></textarea><br>
+
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <label for="subscribe" style="font-weight: bold;">Subscribe to our newsletter</label><br>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <input type="submit" value="Submit" style="background-color: teal; color: white; padding: 10px 20px; border: none;">
+    </form>
+</body>
+</html>

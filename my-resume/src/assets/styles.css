@@ -1,0 +1,31 @@
+nav {
+    background-color: #5c6ac4;
+    padding: 1em 0;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 15px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  nav li:hover {
+    color: #f4f5f7;
+  }
+  
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 1s;
+  }
+  
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+

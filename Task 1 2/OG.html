@@ -1,0 +1,349 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Geek Heads</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<style>
+    /* Add your custom form styles here */
+    .form-container {
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        border-radius: 10px;
+        width: 350px;
+        text-align: center;
+        margin: 20px;
+        float: left;
+    }
+
+    .form-container h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .form-container label {
+        display: block;
+        margin: 15px 0 8px;
+        color: #555;
+        font-size: 14px;
+        text-align: left; /* Align the label text to the left */
+    }
+
+    .form-container input,
+    .form-container textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    .form-container input[type="checkbox"] {
+        margin-right: 5px;
+        margin-bottom: -3px; /* Adjust the margin to align the checkbox */
+    }
+
+    .form-container button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .form-container button:hover {
+        background-color: #45a049;
+    }
+
+    /* Add styles for the display table */
+    #display-table-container {
+        margin: 20px;
+        float: left;
+    }
+
+    #display-table {
+        border-collapse: collapse;
+        width: 350px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+    #display-table th, #display-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    #display-table th {
+        background-color: #4caf50;
+        color: #fff;
+    }
+
+    #display-table-caption {
+        text-align: left;
+        font-size: 18px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    #display-table tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #display-table tbody tr:hover {
+        background-color: #ddd;
+    }
+
+    /* Add styles for the image */
+    #side-image {
+        float: left;
+        width: 250px;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+
+        /* Make form responsive */
+        @media only screen and (max-width: 600px) {
+        .form-container {
+            width: 100%;
+            margin: 20px 0;
+        }
+    }
+
+    /* Make table responsive */
+    @media only screen and (max-width: 600px) {
+        #display-table-container {
+            clear: both;
+            margin: 20px 0;
+        }
+
+        #display-table {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    /* Make image responsive */
+    @media only screen and (max-width: 600px) {
+        #side-image {
+            float: none;
+            width: 100%;
+            margin: 20px 0;
+        }
+    }
+    
+</style>
+
+</head>
+
+<link rel="stylesheet" type="text/css" href="main.css">
+    <script>/* Open when someone clicks on the span element */
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+    
+}
+function myFunction(x) {
+    x.classList.toggle("change");
+
+} 
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav(x) {
+    document.getElementById("myNav").style.width = "0%";
+} </script>
+<body>
+  
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+<div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div> </a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+<a href=""><input type="button" class="bn" value="Home"></a>
+<a href="Pages/Gadgets.html"><input type="button" class="bn" value="Gadgets"></a>
+<a href="Pages/News.html"><input type="button" class="bn" value="News"></a>
+<a href="Pages/Apps.html"><input type="button" class="bn" value="Apps"></a>
+<a href="./Quiz/Quiz.html">
+<input type="button" class="bn" value="Quiz Time ?">
+</a>
+</div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()">    
+ <div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>    
+</span>    
+
+<br><br><br>
+<div class="d1">
+    
+<div class="fader">        
+<div class="db" disabled>Geek Heads </div>
+    <hr class=sepr width=0;>
+<div class="dc"> Latest News, Gadgets and Apps</div>
+</div>
+</div>    
+
+
+<div class="d2">
+<center> &nbsp&nbsp&nbsp&nbsp&nbsp <a href="./Pages/Gadgets.html"> <img src="img/icod.png" align="center" width="10%"class="logos"></a>
+</center>
+<p class="p1">
+Gadgets
+</p><br><br>
+<hr width="70%">
+
+<p class="p2" align="center" style="color: #777;background-color:white;line-height: 1.8;text-align:center;font-size:26px; word-spacing: 10px;font-family:Tw Cen MT" >
+Its all about future isn't ? Curious to use new and latest technologies, right ! So, the wait is over. Here you can access all
+the latest technologies and read about them. Even you can do a lot more ! We also have a daily quiz on the latest news, so you can outsmart
+people with your memory skills too.
+</p>
+
+<hr width="70%">
+</div>
+
+
+<div class="d3"></div>
+
+
+<div class="d2">
+<center> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="./Pages/Apps.html"> <img src="img/icoa.png" align="center" width="10%"class="logos"></a>
+</center>
+<p class="p1">
+Apps
+</p><br><br>
+<hr width="70%">
+
+<p class="p2" align="center" style="color: #777;background-color:white;line-height: 2;text-align:center;font-size:26px; word-spacing: 10px;font-family:Tw Cen MT" >
+Smartphones are getting smarter day by day so why don't we ? All the latest updates on application of either of Android or iOS. Get free download links
+from our secure servers. All the apps the updated periodically.
+</p>
+
+<hr width="70%">
+</div>
+<div>
+
+
+<div class="d4"></div>
+
+
+<div class="d2">
+<center> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="./Pages/News.html"> <img src="img/new.png" align="center" width="10%"class="logos"></a>
+</center>
+<p class="p1">
+News
+</p><br><br>
+<hr width="70%">
+
+<p class="p2" align="center" style="color: #777;background-color:white;line-height: 2;text-align:center;font-size:26px; word-spacing: 10px;font-family:Tw Cen MT" >
+Get latest news on technology trending around the world. Always know what's going around you. Its time move to a smarter way of getting information.
+</p>
+
+<hr width="70%">
+</div>
+</div>
+
+
+<img id="side-image" src="your-image-url.jpg" alt="Side Image">
+
+    <!-- Form integration -->
+    <div class="form-container">
+        <form id="contactForm" onsubmit="return submitForm()">
+            <h2>Contact Us</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <label>
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                Subscribe to our newsletter
+            </label>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Display table for submitted data -->
+    <div id="display-table-container">
+        <h3 id="display-table-caption">Submitted Information</h3>
+        <table id="display-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Subscribe</th>
+                </tr>
+            </thead>
+            <tbody> 
+                <!-- Example row -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>This is a sample message.</td>
+                    <td>Yes</td>
+                </tr>    
+                                
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function submitForm() {
+            // Get form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var subscribe = document.getElementById("subscribe").checked ? "Yes" : "No";
+
+            // Add a new row to the display table
+            var table = document.getElementById("display-table").getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow(0);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3);
+
+            // Populate the cells with form values
+            cell1.innerHTML = name;
+            cell2.innerHTML = email;
+            cell3.innerHTML = message;
+            cell4.innerHTML = subscribe;
+
+            // Clear the form
+            document.getElementById("contactForm").reset();
+
+            // Prevent the form from actually submitting
+            return false;
+        }
+    </script>
+
+</body>
+</html>

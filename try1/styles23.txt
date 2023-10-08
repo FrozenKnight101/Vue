@@ -1,0 +1,47 @@
+body {
+    background-color: #282c34;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#html-code-container,
+#css-code-container,
+#output-window {
+    white-space: pre-wrap;
+    overflow: auto;
+    max-height: 300px;
+    padding: 20px;
+    border: 2px solid #61dafb;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+#html-code-container {
+    margin-right: 20px;
+}
+
+#css-code-container {
+    margin-left: 20px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: white;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
